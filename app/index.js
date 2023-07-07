@@ -25,3 +25,4 @@ app.get("/register",authorization.soloPublico,(req,res)=> res.sendFile(__dirname
 app.get("/admin",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/admin/admin.html"));
 app.post("/api/login",authentication.login);
 app.post("/api/register",authentication.register);
+app.get("/verificar/:token", authentication.verificarCuenta);
